@@ -1,0 +1,8 @@
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+
+    <service verb="produce" noun="DataDocuments" type="script"
+             location="classpath://org/moqui/kafka/produceDataDocuments.groovy" authenticate="false" no-remember-parameters="true" transaction-timeout="3600">
+        <implements service="org.moqui.EntityServices.receive#DataFeed"/>
+    </service>
+
+</services>

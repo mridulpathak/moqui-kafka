@@ -1,0 +1,11 @@
+<entity-facade-xml type="seed-initial">
+
+    <org.moqui.impl.EntityServices.cloneDataDocument dataDocumentId="MantleProduct" newDataDocumentId="ProductView" newIndexName="kafka_product_view"/>
+
+    <!-- Kafka Data Feed -->
+    <moqui.entity.feed.DataFeed dataFeedId="PRODUCT_VIEW" dataFeedTypeEnumId="DTFDTP_RT_PUSH"
+                                feedName="Produce Product Kafka Topic" feedReceiveServiceName="org.moqui.kafka.DataDocumentServices.produce#DataDocuments">
+        <documents dataDocumentId="ProductView"/>
+    </moqui.entity.feed.DataFeed>
+    
+</entity-facade-xml>
